@@ -24,7 +24,14 @@ _ensure_runtime_package("pyrogram", "pyrogram==2.0.106")
 # deployment containers (including Python 3.13 images) have no C compiler,
 # which makes TgCrypto fail during wheel compilation and kills the bot.
 _ensure_runtime_package("yt_dlp", "yt-dlp>=2025.1.0")
+import asyncio
 
+try:
+    asyncio.get_event_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
+from pyrogram import Client, filters, enums
 import asyncio
 import logging
 import os
