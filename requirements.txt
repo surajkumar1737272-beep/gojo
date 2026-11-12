@@ -1,0 +1,15 @@
+pyrogram
+Telethon-MCUB
+TgCrypto
+pyTelegramBotAPI
+Flask
+firebase-admin
+requests
+aiohttp
+httpx
+cryptography
+Pillow
+qrcode
+psutil
+ping3
+gunicorn
